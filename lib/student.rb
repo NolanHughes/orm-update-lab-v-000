@@ -55,4 +55,11 @@ class Student
     student = Student.create(row[1], row[2])
   end
 
+  def self.find_by_name(name)
+    sql = <<-SQL
+      SELECT * FROM students 
+      WHERE name = ?
+      SQL
+  end
+
 end
