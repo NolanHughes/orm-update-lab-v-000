@@ -6,8 +6,8 @@ class Student
   attr_reader :id
 
   def initialize(id = nil, name, grade)
-    binding.pry
-    @id, @name, @grade = nil, name, grade
+    @id, @name, @grade = id, name, grade
+    
   end
 
   def self.create_table
