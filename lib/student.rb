@@ -9,7 +9,7 @@ class Student
   end
 
   def self.create_table
-    sql = <<-SQL CREATE TABLE (
+    sql = <<-SQL CREATE TABLE students (
       id INTEGER PRIMARY KEY,
       name TEXT,
       grade INTEGER
