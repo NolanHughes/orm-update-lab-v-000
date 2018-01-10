@@ -8,7 +8,7 @@ class Student
     @id, @name, @grade = nil, name, grade
   end
 
-  def create_table
+  def self.create_table
     sql = <<-SQL CREATE TABLE (
       id INTEGER PRIMARY KEY,
       name TEXT,
@@ -16,7 +16,7 @@ class Student
     );
     SQL
 
-    
+    DB[:conn].execute(sql)
   end
 
 end
