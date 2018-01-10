@@ -7,7 +7,6 @@ class Student
 
   def initialize(id = nil, name, grade)
     @id, @name, @grade = id, name, grade
-
   end
 
   def self.create_table
@@ -52,7 +51,6 @@ class Student
   end
 
   def self.new_from_db(row)
-    binding.pry
     student = Student.new(row[0], row[1], row[2])
     binding.pry
     student.save
