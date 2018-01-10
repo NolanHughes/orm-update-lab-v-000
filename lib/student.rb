@@ -67,7 +67,7 @@ class Student
     binding.pry
     result = DB[:conn].execute(sql, name)[0]
     binding.pry
-    Student.create(result[1], result[2])
+    Student.new_from_db(result)
     binding.pry
   end
 
