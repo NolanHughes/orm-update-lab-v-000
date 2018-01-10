@@ -51,9 +51,13 @@ class Student
   end
 
   def self.new_from_db(row)
-    student = Student.new(row[1], row[2])
-    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
-    student
+    if self.idea
+      self.update
+    else
+      student = Student.new(row[1], row[2])
+      student.save
+      student
+    end
   end
 
   def self.find_by_name(name)
