@@ -51,7 +51,7 @@ class Student
   end
 
   def self.new_from_db(row)
-    if self.idea
+    if self.id
       self.update
     else
       student = Student.new(row[1], row[2])
