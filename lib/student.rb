@@ -66,8 +66,9 @@ class Student
     sql = "SELECT * FROM students WHERE name = ?"
     binding.pry
     result = DB[:conn].execute(sql, name)[0]
-    pry
+    binding.pry
     Student.create(result[1], result[2])
+    binding.pry
   end
 
 end
