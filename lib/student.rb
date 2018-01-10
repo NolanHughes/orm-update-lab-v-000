@@ -52,13 +52,13 @@ class Student
   end
 
   def self.new_from_db(row)
-    binding.pry
+    # binding.pry
     student = Student.create(row[1], row[2])
-    binding.pry
-    student.id = row[0]
-    student.name = row[1]
-    student.grade = row[2]
-    student
+    # binding.pry
+    # student.id = row[0]
+    # student.name = row[1]
+    # student.grade = row[2]
+    # student
   end
 
 end
